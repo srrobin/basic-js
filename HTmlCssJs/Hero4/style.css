@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+:root {
+  --trans-05: all 0.5s ease;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #131313;
+  font-size: 1rem;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 10px 8%;
+  background: #282828;
+  box-shadow: 1px 2px 30px 0 #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--trans-05);
+  z-index: 999;
+}
+.toggle__menu {
+  color: aliceblue;
+  font-size: 25px;
+  margin: 3px;
+  display: none;
+}
+.logo {
+  font-size: 25px;
+  color: gold;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li a {
+  color: #fff;
+}
+main {
+  padding: 80px 8%;
+  color: #fff;
+  position: relative;
+}
+.circle {
+  position: relative;
+  overflow: hidden;
+}
+.circle img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.circle.left__img {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  float: left;
+  margin: 20px;
+  shape-outside: circle();
+}
+.circle.right__img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  float: right;
+  margin: 20px;
+  shape-outside: circle();
+}
+main h2 {
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  text-align: justify;
+  text-align: center;
+  margin-block-end: 40px;
+  display: block;
+}
+.text__area {
+  font-size: 16px;
+  text-align: justify;
+}
+@media (max-width: 992px) {
+  .circle.left__img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    float: left;
+    margin: 20px;
+    shape-outside: circle();
+  }
+  .circle.right__img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    float: right;
+    margin: 20px;
+    shape-outside: circle();
+  }
+}
+@media (max-width: 576px) {
+  header {
+    padding: 10px 5%;
+  }
+  .toggle__menu {
+    display: block;
+  }
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0px;
+    background: #b91e1e;
+    overflow: hidden;
+    transition: var(--trans-05);
+  }
+  nav.open {
+    height: 250px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 10px;
+  }
+  main {
+    padding: 80px 5%;
+  }
+  .circle.left__img {
+    height: 330px;
+  }
+  .circle.right__img {
+    height: 100px;
+    width: 100px;
+    margin: 15px;
+  }
+}

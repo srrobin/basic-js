@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 100%;
+  padding: 100px;
+}
+.circle {
+  position: relative;
+  overflow: hidden;
+}
+.circle img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+.circle.left__img {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  float: left;
+  margin: 20px;
+  shape-outside: circle();
+}
+.circle.right__img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  float: right;
+  margin: 20px;
+  shape-outside: circle();
+}
+.text__area h2{
+    font-size: 3rem;
+    text-align: justify;
+}
+.text__area{
+    font-size: 16px;
+    text-align: justify;
+}
